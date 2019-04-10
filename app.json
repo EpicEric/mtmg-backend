@@ -1,0 +1,14 @@
+{
+  "name": "Matemagincana - Backend",
+  "description": "A very simple backend for github.com/epiceric/mtmg.com.br",
+  "image": "heroku/python",
+  "repository": "https://github.com/epiceric/mtmg-backend",
+  "keywords": ["python", "flask"],
+  "addons": ["heroku-postgresql"],
+  "env": {
+    "SECRET_KEY": {
+      "description": "This should be changed with `heroku config:set SECRET_KEY=\"`< /dev/urandom base64 | tr -dc 'a-zA-Z0-9' | head -c16`\"` after the initial deploy.",
+      "value": "YEuUAHpwAiwo2bkj"
+    }
+  }
+}
