@@ -4,11 +4,13 @@ import threading
 import time
 
 from flask import current_app, Flask, jsonify, request
+from flask_cors import CORS
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 import requests
 
 app = Flask(__name__)
+CORS(app)
 app.config.from_mapping(
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'dev_key',
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
